@@ -84,8 +84,8 @@ public class RegisterUserDemo {
 		// maximize the application
 		driver.manage().window().maximize();
 
-		Reporter.log("Application Is Launched SuccessFully");
-		Reporter.log("---------------------------------------------------------------------");
+		System.out.println("Application Is Launched SuccessFully");
+		System.out.println("---------------------------------------------------------------------");
 
 	}
 
@@ -97,18 +97,18 @@ public class RegisterUserDemo {
 		// Hover Mouse above the QA Automation
 		WebElement qaAutomation = driver.findElement(By.linkText(qaAutomationPath));
 		action.moveToElement(qaAutomation).perform();
-		Reporter.log("Hover Mouse Action Performed For QA Automation Link ");
+		System.out.println("Hover Mouse Action Performed For QA Automation Link ");
 
 		// Hover Mouse above the Practice Automation
 		WebElement practAutomation = driver.findElement(By.linkText(practAutomationPath));
 		action.moveToElement(practAutomation).perform();
-		Reporter.log("Hover Mouse Action Performed For Practice Automation Link ");
+		System.out.println("Hover Mouse Action Performed For Practice Automation Link ");
 
 		// Click On Demo Site- Registration Form
 		WebElement regiForm = driver.findElement(By.partialLinkText(regiFormPath));
 		action.moveToElement(regiForm).click().perform();
-		Reporter.log("Hover Mouse Action Performed For Demo Site- Registration Form Link ");
-		Reporter.log("---------------------------------------------------------------------");
+		System.out.println("Hover Mouse Action Performed For Demo Site- Registration Form Link ");
+		System.out.println("---------------------------------------------------------------------");
 
 	}
 
@@ -121,9 +121,9 @@ public class RegisterUserDemo {
 		// Verify The Registration Title Page
 
 		if(formTitle.isDisplayed()) {
-			Reporter.log("Title For Displayed");
+			System.out.println("Title For Displayed");
 		} else {
-			Reporter.log("Title Is Not Displayed");
+			System.out.println("Title Is Not Displayed");
 		}
 
 		// Validating Text 
@@ -132,20 +132,20 @@ public class RegisterUserDemo {
 		String expFormTitle = formTitleInput;
 
 		if(actFormTitle.equals(expFormTitle)) {
-			Reporter.log("The Form Title Is " + actFormTitle);
+			System.out.println("The Form Title Is " + actFormTitle);
 		}
 		else {
-			Reporter.log("The Actual And Expected From Title Are Not Same");
-			Reporter.log("The Actual From Title is " + actFormTitle);
-			Reporter.log("The Expected From Title Is " + expFormTitle);
+			System.out.println("The Actual And Expected From Title Are Not Same");
+			System.out.println("The Actual From Title is " + actFormTitle);
+			System.out.println("The Expected From Title Is " + expFormTitle);
 		}
 
 		// Verify The Registration Title Page Is Enabled Or Not
 		if(formTitle.isEnabled()) {
-			Reporter.log("Registration Title Page Is " + formTitleInput );
-			Reporter.log("Registration Title Page Is Enabled ");
+			System.out.println("Registration Title Page Is " + formTitleInput );
+			System.out.println("Registration Title Page Is Enabled ");
 		}else {
-			Reporter.log("Registration Title Page Is Not Enabled");
+			System.out.println("Registration Title Page Is Not Enabled");
 		}
 
 		// First Name
@@ -154,9 +154,9 @@ public class RegisterUserDemo {
 		// Verify The First Name 
 		if(firstName.isDisplayed()) {
 
-			Reporter.log("First Name Is Displayed");
+			System.out.println("First Name Is Displayed");
 		}else {
-			Reporter.log("First Name Is Not Displayed");
+			System.out.println("First Name Is Not Displayed");
 		}
 
 		// Verify The First Name Is Enabled Or Not
@@ -165,10 +165,10 @@ public class RegisterUserDemo {
 			// Enter First Name 
 			firstName.sendKeys(firstNameInput);
 
-			Reporter.log("First Name Is " + firstNameInput );
-			Reporter.log("First Name Is Enabled ");
+			System.out.println("First Name Is " + firstNameInput );
+			System.out.println("First Name Is Enabled ");
 		}else {
-			Reporter.log("First Name Is Not Enabled");
+			System.out.println("First Name Is Not Enabled");
 		}
 
 		// Last Name 
@@ -177,9 +177,9 @@ public class RegisterUserDemo {
 		// Verify The Last Name 
 		if(lastName.isDisplayed()) {
 
-			Reporter.log("Last Name Is Displayed");
+			System.out.println("Last Name Is Displayed");
 		}else {
-			Reporter.log("Last Name Is Not Displayed");
+			System.out.println("Last Name Is Not Displayed");
 		}
 
 		// Verify The Last Name Is Enabled Or Not
@@ -188,10 +188,10 @@ public class RegisterUserDemo {
 			// Enter Last Name 
 			lastName.sendKeys(lastNameInput);
 
-			Reporter.log("Last Name Is " + lastNameInput );
-			Reporter.log("Last Name Is Enabled ");
+			System.out.println("Last Name Is " + lastNameInput );
+			System.out.println("Last Name Is Enabled ");
 		}else {
-			Reporter.log("Last Name Is Not Enabled");
+			System.out.println("Last Name Is Not Enabled");
 		}
 
 		// Gender
@@ -200,9 +200,9 @@ public class RegisterUserDemo {
 
 		// Verify The Male Radio Button 
 		if(maleRadioButton.isDisplayed()) {
-			Reporter.log("Male Radio Button Is Displayed");
+			System.out.println("Male Radio Button Is Displayed");
 		}else {
-			Reporter.log("Male Radio Button Is Not Displayed");
+			System.out.println("Male Radio Button Is Not Displayed");
 		}
 
 		// Verify The Male Radio Button Is Enabled Or Not
@@ -211,18 +211,18 @@ public class RegisterUserDemo {
 			// Click On Male Radio Button
 			maleRadioButton.click();
 
-			Reporter.log("Male Radio Button Is " + genderInput );
-			Reporter.log("Male Radio Button Is Enabled ");
+			System.out.println("Male Radio Button Is " + genderInput );
+			System.out.println("Male Radio Button Is Enabled ");
 		}else {
-			Reporter.log("Male Radio Button Is Not Enabled");
+			System.out.println("Male Radio Button Is Not Enabled");
 		}
 
 		// Verify The Male Radio Button Is Selected
 		if(maleRadioButton.isSelected()) {
 
-			Reporter.log("Male Radio Button Is Selected");
+			System.out.println("Male Radio Button Is Selected");
 		} else {
-			Reporter.log("Male Radio Button Is Not Selected");
+			System.out.println("Male Radio Button Is Not Selected");
 
 		}
 
@@ -232,9 +232,9 @@ public class RegisterUserDemo {
 		// Verify The Address 
 		if(address.isDisplayed()) {
 
-			Reporter.log("Address Is Displayed");
+			System.out.println("Address Is Displayed");
 		}else {
-			Reporter.log("Address Is Not Displayed");
+			System.out.println("Address Is Not Displayed");
 		}
 
 		// Verify The Address Is Enabled Or Not
@@ -243,10 +243,10 @@ public class RegisterUserDemo {
 			// Enter The Address
 			address.sendKeys(addressInput);
 
-			Reporter.log("Address Is " + addressInput );
-			Reporter.log("Address Is Enabled ");
+			System.out.println("Address Is " + addressInput );
+			System.out.println("Address Is Enabled ");
 		}else {
-			Reporter.log("Address Is Not Enabled");
+			System.out.println("Address Is Not Enabled");
 		}
 
 		// Street Address
@@ -255,9 +255,9 @@ public class RegisterUserDemo {
 		// Verify The Street Address 
 		if(streetAddress.isDisplayed()) {
 
-			Reporter.log("Street Address Is Displayed");
+			System.out.println("Street Address Is Displayed");
 		}else {
-			Reporter.log("Street Address Is Not Displayed");
+			System.out.println("Street Address Is Not Displayed");
 		}
 
 		// Verify The Street Address Is Enabled Or Not
@@ -266,10 +266,10 @@ public class RegisterUserDemo {
 			// Enter Street Address
 			streetAddress.sendKeys(streetAddressInput);
 
-			Reporter.log("Street Address Is " + streetAddressInput );
-			Reporter.log("Street Address Is Enabled ");
+			System.out.println("Street Address Is " + streetAddressInput );
+			System.out.println("Street Address Is Enabled ");
 		}else {
-			Reporter.log("Street Address Is Not Enabled");
+			System.out.println("Street Address Is Not Enabled");
 		}
 
 		// City
@@ -278,9 +278,9 @@ public class RegisterUserDemo {
 		// Verify The City 
 		if(city.isDisplayed()) {
 
-			Reporter.log("City Is Displayed");
+			System.out.println("City Is Displayed");
 		}else {
-			Reporter.log("City Is Not Displayed");
+			System.out.println("City Is Not Displayed");
 		}
 
 		// Verify The City Is Enabled Or Not
@@ -289,10 +289,10 @@ public class RegisterUserDemo {
 			// Enter City
 			city.sendKeys(cityInput);
 
-			Reporter.log("City Is " + cityInput );
-			Reporter.log("City Is Enabled ");
+			System.out.println("City Is " + cityInput );
+			System.out.println("City Is Enabled ");
 		}else {
-			Reporter.log("City Is Not Enabled");
+			System.out.println("City Is Not Enabled");
 		}
 
 		// State
@@ -301,9 +301,9 @@ public class RegisterUserDemo {
 		// Verify The State 
 		if(state.isDisplayed()) {
 
-			Reporter.log("State Is Displayed");
+			System.out.println("State Is Displayed");
 		}else {
-			Reporter.log("State Is Not Displayed");
+			System.out.println("State Is Not Displayed");
 		}
 
 		// Verify The State Is Enabled Or Not
@@ -312,10 +312,10 @@ public class RegisterUserDemo {
 			// Enter State
 			state.sendKeys(stateInput);
 
-			Reporter.log("State Is " + stateInput );
-			Reporter.log("State Is Enabled ");
+			System.out.println("State Is " + stateInput );
+			System.out.println("State Is Enabled ");
 		}else {
-			Reporter.log("State Is Not Enabled");
+			System.out.println("State Is Not Enabled");
 		}
 
 		// Pin Code
@@ -323,9 +323,9 @@ public class RegisterUserDemo {
 
 		// Verify The Pin Code 
 		if(pinCode.isDisplayed()) {
-			Reporter.log("Pin Code Is Displayed");
+			System.out.println("Pin Code Is Displayed");
 		}else {
-			Reporter.log("Pin Code Is Not Displayed");
+			System.out.println("Pin Code Is Not Displayed");
 		}
 
 		// Verify The Pin Code Is Enabled Or Not
@@ -334,10 +334,10 @@ public class RegisterUserDemo {
 			// Enter Pin Code
 			pinCode.sendKeys(pinCodeInput);
 
-			Reporter.log("Pin Code Is " + pinCodeInput );
-			Reporter.log("Pin Code Is Enabled ");
+			System.out.println("Pin Code Is " + pinCodeInput );
+			System.out.println("Pin Code Is Enabled ");
 		}else {
-			Reporter.log("Pin Code Is Not Enabled");
+			System.out.println("Pin Code Is Not Enabled");
 		}
 
 		// Country 
@@ -345,9 +345,9 @@ public class RegisterUserDemo {
 
 		// Verify The Country 
 		if(country.isDisplayed()) {
-			Reporter.log("Country Is Displayed");
+			System.out.println("Country Is Displayed");
 		}else {
-			Reporter.log("Country Is Not Displayed");
+			System.out.println("Country Is Not Displayed");
 		}
 
 		// Verify The Country Is Enabled Or Not
@@ -359,12 +359,12 @@ public class RegisterUserDemo {
 			// Select Using Visible Text		
 			countryDropDown.selectByVisibleText(countryInput);
 
-			Reporter.log("Selected Country Is " + countryInput);
+			System.out.println("Selected Country Is " + countryInput);
 
-			Reporter.log("Country Is Enabled ");
+			System.out.println("Country Is Enabled ");
 
 		}else {
-			Reporter.log("Country Is Not Enabled");
+			System.out.println("Country Is Not Enabled");
 		}
 
 		// Email
@@ -373,9 +373,9 @@ public class RegisterUserDemo {
 		// Verify The Email
 		if(email.isDisplayed()) {
 
-			Reporter.log("Email Is Displayed");
+			System.out.println("Email Is Displayed");
 		}else {
-			Reporter.log("Email Is Not Displayed");
+			System.out.println("Email Is Not Displayed");
 		}
 
 		// Verify The Email Is Enabled Or Not
@@ -384,10 +384,10 @@ public class RegisterUserDemo {
 			// Enter Email
 			email.sendKeys(emailInput);
 
-			Reporter.log("Email Is " + emailInput );
-			Reporter.log("Email Is Enabled ");
+			System.out.println("Email Is " + emailInput );
+			System.out.println("Email Is Enabled ");
 		}else {
-			Reporter.log("Email Is Not Enabled");
+			System.out.println("Email Is Not Enabled");
 		}
 
 		// Date of Demo
@@ -396,9 +396,9 @@ public class RegisterUserDemo {
 		// Verify The Date Of Demo
 		if(dateOfDemo.isDisplayed()) {
 
-			Reporter.log("Date Of Demo Is Displayed");
+			System.out.println("Date Of Demo Is Displayed");
 		}else {
-			Reporter.log("Date Of Demo Is Displayed");
+			System.out.println("Date Of Demo Is Displayed");
 		}
 
 		// Verify The Date Of Demo Is Enabled Or Not
@@ -407,10 +407,10 @@ public class RegisterUserDemo {
 			// Enter Date Of Demo
 			dateOfDemo.sendKeys(dateOfDemoInput);
 
-			Reporter.log("Date Of Demo Is " + dateOfDemoInput );
-			Reporter.log("Date Of Demo Is Enabled ");
+			System.out.println("Date Of Demo Is " + dateOfDemoInput );
+			System.out.println("Date Of Demo Is Enabled ");
 		}else {
-			Reporter.log("Date Of Demo Is Not Enabled");
+			System.out.println("Date Of Demo Is Not Enabled");
 		}
 
 		// Convenient Time HH
@@ -418,9 +418,9 @@ public class RegisterUserDemo {
 
 		// Verify The Convenient Time HH
 		if(convenientTimeHh.isDisplayed()) {
-			Reporter.log("Convenient Time HH Is Displayed");
+			System.out.println("Convenient Time HH Is Displayed");
 		}else {
-			Reporter.log("Convenient Time HH Is Displayed");
+			System.out.println("Convenient Time HH Is Displayed");
 		}
 
 		// Verify The Convenient Time HH Is Enabled Or Not
@@ -432,11 +432,11 @@ public class RegisterUserDemo {
 			// Select Using Visible Text		
 			hHDropDown.selectByVisibleText(convenientTimeHhInput);
 
-			Reporter.log(convenientTimeHhInput + " Is Select Convenient Time HH");
+			System.out.println(convenientTimeHhInput + " Is Select Convenient Time HH");
 
-			Reporter.log("Convenient Time HH Is Enabled ");
+			System.out.println("Convenient Time HH Is Enabled ");
 		}else {
-			Reporter.log("Convenient Time HH Is Not Enabled");
+			System.out.println("Convenient Time HH Is Not Enabled");
 		}
 
 		// Convenient Time MM
@@ -444,9 +444,9 @@ public class RegisterUserDemo {
 
 		// Verify The Convenient Time MM
 		if(convenientTimeMm.isDisplayed()) {
-			Reporter.log("Convenient Time MM Is Displayed");
+			System.out.println("Convenient Time MM Is Displayed");
 		}else {
-			Reporter.log("Convenient Time MM Is Displayed");
+			System.out.println("Convenient Time MM Is Displayed");
 		}
 
 		// Verify The Convenient Time MM Is Enabled Or Not
@@ -458,11 +458,11 @@ public class RegisterUserDemo {
 			// Select Using Visible Text		
 			mMDropDown.selectByVisibleText(convenientTimeMmInput);
 
-			Reporter.log(convenientTimeMmInput + " Is Select Convenient Time MM");
+			System.out.println(convenientTimeMmInput + " Is Select Convenient Time MM");
 
-			Reporter.log("Convenient Time MM Is Enabled ");
+			System.out.println("Convenient Time MM Is Enabled ");
 		}else {
-			Reporter.log("Convenient Time MM Is Not Enabled");
+			System.out.println("Convenient Time MM Is Not Enabled");
 		}
 
 		// Mobile Number
@@ -470,9 +470,9 @@ public class RegisterUserDemo {
 
 		// Verify The Mobile Number
 		if(mobileNumber.isDisplayed()) {
-			Reporter.log("Mobile Number Is Displayed");
+			System.out.println("Mobile Number Is Displayed");
 		}else {
-			Reporter.log("Mobile Number Is Displayed");
+			System.out.println("Mobile Number Is Displayed");
 		}
 
 		// Verify The Mobile Number Is Enabled Or Not
@@ -481,10 +481,10 @@ public class RegisterUserDemo {
 			// Enter Mobile Number
 			mobileNumber.sendKeys(mobileNumberInput);
 
-			Reporter.log("Mobile Number Is " + mobileNumberInput );
-			Reporter.log("Mobile Number Is Enabled ");
+			System.out.println("Mobile Number Is " + mobileNumberInput );
+			System.out.println("Mobile Number Is Enabled ");
 		}else {
-			Reporter.log("Mobile Number Is Not Enabled");
+			System.out.println("Mobile Number Is Not Enabled");
 		}
 
 		// Course Interested UFT
@@ -492,9 +492,9 @@ public class RegisterUserDemo {
 
 		// Verify The Course Interested
 		if(courseInterestedUft.isDisplayed()) {
-			Reporter.log("Course Interested UFT Is Displayed");
+			System.out.println("Course Interested UFT Is Displayed");
 		}else {
-			Reporter.log("Course Interested UFT Is Displayed");
+			System.out.println("Course Interested UFT Is Displayed");
 		}
 
 		// Verify The Course Interested Is Enabled Or Not
@@ -503,10 +503,10 @@ public class RegisterUserDemo {
 			// Click On UFT
 			courseInterestedUft.click();
 
-			Reporter.log("Course Interested UFT Is " + courseInterestedInputUft );
-			Reporter.log("Course Interested UFT Is Enabled ");
+			System.out.println("Course Interested UFT Is " + courseInterestedInputUft );
+			System.out.println("Course Interested UFT Is Enabled ");
 		}else {
-			Reporter.log("Course Interested UFT Is Not Enabled");
+			System.out.println("Course Interested UFT Is Not Enabled");
 		}
 
 		// Course Interested TextNG
@@ -514,9 +514,9 @@ public class RegisterUserDemo {
 
 		// Verify The Course Interested
 		if(courseInterestedTestNg.isDisplayed()) {
-			Reporter.log("Course Interested TestNG Is Displayed");
+			System.out.println("Course Interested TestNG Is Displayed");
 		}else {
-			Reporter.log("Course Interested TestNG Is Displayed");
+			System.out.println("Course Interested TestNG Is Displayed");
 		}
 
 		// Verify The Course Interested Is Enabled Or Not
@@ -525,10 +525,10 @@ public class RegisterUserDemo {
 			// Click On TextNG
 			courseInterestedTestNg.click();
 
-			Reporter.log("Course Interested TestNG Is " + courseInterestedInputTextNg );
-			Reporter.log("Course Interested TestNG Is Enabled ");
+			System.out.println("Course Interested TestNG Is " + courseInterestedInputTextNg );
+			System.out.println("Course Interested TestNG Is Enabled ");
 		}else {
-			Reporter.log("Course Interested TestNG Is Not Enabled");
+			System.out.println("Course Interested TestNG Is Not Enabled");
 		}
 
 		// Enter Your Query
@@ -536,9 +536,9 @@ public class RegisterUserDemo {
 
 		// Verify The Enter Your Query
 		if(YourQuery.isDisplayed()) {
-			Reporter.log("Enter Your Query Is Displayed");
+			System.out.println("Enter Your Query Is Displayed");
 		}else {
-			Reporter.log("Enter Your Query Is Displayed");
+			System.out.println("Enter Your Query Is Displayed");
 		}
 
 		// Verify The Enter Your Query Is Enabled Or Not
@@ -547,10 +547,10 @@ public class RegisterUserDemo {
 			// Enter Your Query
 			YourQuery.sendKeys(YourQueryInput);
 
-			Reporter.log("Enter Your Query Is " + YourQueryInput );
-			Reporter.log("Enter Your Query Is Enabled ");
+			System.out.println("Enter Your Query Is " + YourQueryInput );
+			System.out.println("Enter Your Query Is Enabled ");
 		}else {
-			Reporter.log("Enter Your Query Is Not Enabled");
+			System.out.println("Enter Your Query Is Not Enabled");
 		}
 
 		// Verification
@@ -560,9 +560,9 @@ public class RegisterUserDemo {
 
 		// Verify The Verification
 		if(egTwoDigit.isDisplayed()) {
-			Reporter.log("Verification Is Displayed");
+			System.out.println("Verification Is Displayed");
 		}else {
-			Reporter.log("Verification Is Displayed");
+			System.out.println("Verification Is Displayed");
 		}
 
 		// Enter The Verification
@@ -574,10 +574,10 @@ public class RegisterUserDemo {
 			// Enter Value 
 			eg_TwoDigit.sendKeys(digitVal);
 
-			Reporter.log("Verification Value Is " + digitVal );
-			Reporter.log("Verification Is Enabled ");
+			System.out.println("Verification Value Is " + digitVal );
+			System.out.println("Verification Is Enabled ");
 		}else {
-			Reporter.log("Verification Is Not Enabled");
+			System.out.println("Verification Is Not Enabled");
 		}
 
 		// Submit Button
@@ -586,9 +586,9 @@ public class RegisterUserDemo {
 		// Verify The Submit Button
 		if(submitBtn.isDisplayed()) {
 
-			Reporter.log("Submit Button Is Displayed");
+			System.out.println("Submit Button Is Displayed");
 		}else {
-			Reporter.log("Submit Button Is Displayed");
+			System.out.println("Submit Button Is Displayed");
 		}
 
 		// Verify The Verification Is Enabled Or Not
@@ -597,12 +597,12 @@ public class RegisterUserDemo {
 			// Click On Submit 
 			submitBtn.click();
 
-			Reporter.log("Submit Button Is " + submitBtnInput );
-			Reporter.log("Submit Button  Is Enabled ");
+			System.out.println("Submit Button Is " + submitBtnInput );
+			System.out.println("Submit Button  Is Enabled ");
 		}else {
-			Reporter.log("Submit Button Is Not Enabled");
+			System.out.println("Submit Button Is Not Enabled");
 		}
-		Reporter.log("---------------------------------------------------------------------");
+		System.out.println("---------------------------------------------------------------------");
 	}
 
 	@Test(priority=4)
@@ -612,7 +612,7 @@ public class RegisterUserDemo {
 		WebElement validateMessage = driver.findElement(By.xpath(validateMessagePath));
 
 		if(validateMessage.isDisplayed()) {
-			Reporter.log("Registration Form is Successfully Is Displayed");
+			System.out.println("Registration Form is Successfully Is Displayed");
 
 			String actvalidateMessage = validateMessage.getText();
 			String expvalidateMessage = successFulMessageInput;
@@ -623,17 +623,17 @@ public class RegisterUserDemo {
 			
 
 			if(actvalidateMessage.equals(expvalidateMessage)) {
-				Reporter.log("The Validate Message Is " + actvalidateMessage);
-				Reporter.log("Transaction Id Is " + transIdNumber);
+				System.out.println("The Validate Message Is " + actvalidateMessage);
+				System.out.println("Transaction Id Is " + transIdNumber);
 			}
 
 			else {
-				Reporter.log("The Actual And Expected Validate Message Are Not Same");
-				Reporter.log("The Actual Validate Message  is " + actvalidateMessage);
-				Reporter.log("The Expected Validate Message  Is " + expvalidateMessage);
+				System.out.println("The Actual And Expected Validate Message Are Not Same");
+				System.out.println("The Actual Validate Message  is " + actvalidateMessage);
+				System.out.println("The Expected Validate Message  Is " + expvalidateMessage);
 
 			}
-			Reporter.log("---------------------------------------------------------------------");
+			System.out.println("---------------------------------------------------------------------");
 		}
 
 	}
@@ -643,8 +643,8 @@ public class RegisterUserDemo {
 
 		// Close The Application
 		driver.close();
-		Reporter.log(applicationCloseInput);
-		Reporter.log("---------------------------------------------------------------------");
+		System.out.println(applicationCloseInput);
+		System.out.println("---------------------------------------------------------------------");
 
 	}
 
